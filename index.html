@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOTES_TAKING_APP</title>
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/design.css">
+    <script type="module" src="scripts/controllers/notes-controllers.js"></script>
+   
+    
+    
+   </head>
+   <body>
+    <div class="container">
+    <h1  class="alert alert-info text center">NOTES_TAKING_APP</h1>
+   <div class="form-group">
+    <label>Id</label>
+    <input id="id" class="form-control" type="text" placeholder="Type Id here!">
+    </div>
+    <div class="form-group">
+        <label>Title</label>
+        <input id="title" class="form-control" type="text" placeholder="Type Id here!">
+        </div>
+    <div class="form-group">
+        <label>Description</label>
+        <textarea id="desc" class="form-control"  rows="6" cols="20" placeholder="type decs here!"></textarea>
+        </div>
+        <div class="form-group">
+            <label>Completion Date</label>
+            <input id="cdate" class="form-control" type="date" >
+            </div>
+            <div class="form-group">
+                <label>Importance</label>
+                <input id="importance" class="form-control" type="color" >
+                <div>
+                    <button id="add" class="btn btn-primary" >Add</button>
+                    <button id="delete" class="btn btn-danger">Delete</button>
+                    <button class="btn btn-info">Search</button>
+                    <button id="sort" class="btn btn-success">Sort</button>
+                    <button class="btn btn-warning">Update</button>
+                    <button class="btn btn-success">Save</button>
+                    <button class="btn btn-secondary">Save To Server</button>
+                    <button class="btn btn-danger">Load</button>
+                    <button class="btn btn-success">Load From Server</button>
+                    <button class="btn btn-secondary">clear</button>
+                </div>
+                <div>
+                    <h3>Total Record <span id="total"></span>Mark Records <span id="marktotal"></span>UnMark Records<span id="unmarktotal"></span></h3>
+                </div>
+                <table class="table table-bordered">
+                    <thead class="table-dark">
+                        <tr >
+                            <th >Id</th>
+                            <th >Title</th>
+                            <th >Desc</th>
+                            <th >Date</th>
+                            <th >Importance</th>
+                            <th >Operations</th>
+                        </tr>
+                    </thead>
+                    
+                            <tbody id="notes">
+                                <!--dynamic record will be here-->
+                            </tbody>
+                </table>
+                </div>
+    </div>
+    
+</body>
+</html>
